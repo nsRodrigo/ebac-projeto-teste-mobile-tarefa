@@ -1,4 +1,3 @@
-const { join } = require('path')
 
 exports.config = {
     hotname: 'localhost',
@@ -11,10 +10,11 @@ exports.config = {
     capabilities: [{
         "platformName": "Android",
         "appium:platformVersion": "9.0",
-        "appium:deviceName": "ebac-eq",
+        "appium:deviceName": "pixel-7-pro",
         "appium:automationName": "UIAutomator2",
-        "appium:app": join(process.cwd(), './app/android/loja-ebac.v12.apk'),
-        "appium:appWaitActivity": 'com.woocommerce.android.ui.login.LoginActivity',
+        "appium:appPackage": "com.wdiodemoapp",
+        "appium:appActivity": ".SplashActivity",
+        "appium:appWaitActivity": ".MainActivity"
     }],
     framework: 'mocha',
     waitforTimeout: 10000,
